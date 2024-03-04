@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background:url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 700px;
+    flex-flow: row;
+    position: relative;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(1500px);
+    } 
+    to{
+        transform: translateX(-1500px);
+    } 
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    } 
+    to{
+        transform: rotate(360deg);
+    } 
+}
+
+.tree{
+    position: absolute;
+    margin-top: 80px;
+    animation: move 1s linear infinite;
+    z-index: 1;
+}
+
+.car{
+    position: absolute;
+    position: relative;
+    z-index: 10;
+    margin-left: 500px;
+}
+
+.cimg{
+    margin-top: 335px;
+    width:50%;
+    z-index: 1;
+}
+
+.tire{
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    left: 30px;
+    bottom: 200px;
+}
+
+.tire .timg{
+    width: 15%;
+    z-index: 10;
+    animation: rotate 2s linear infinite;
+}
+
+.t1{
+    margin-right: 97px;
+}
